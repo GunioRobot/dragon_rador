@@ -58,8 +58,8 @@ CGFloat current_color[] = {0.0f, 51.0f/256.0f, 102.0f/256.0f, 1.0f};
    CGContextSetLineWidth(context, 1.0f);
 
    CGContextSetFillColor(context, current_color);
-   CGContextFillEllipseInRect(context, rect);   
-   
+   CGContextFillEllipseInRect(context, rect);
+
    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
 }
 

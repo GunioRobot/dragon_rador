@@ -34,7 +34,7 @@
 {
    [super viewDidLoad];
    self.title = @"Setting";
-   
+
    //UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(done)];
    //self.navigationItem.leftBarButtonItem = backButton;
    //[backButton release];
@@ -62,7 +62,7 @@
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-	
+
 	// Release any cached data, images, etc that aren't in use.
 }
 
@@ -83,7 +83,7 @@
 {
    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:DR_TWITTER_AUTHORIZED];
 
-   // [self dismissModalViewControllerAnimated:YES];  
+   // [self dismissModalViewControllerAnimated:YES];
    AppDelegate *app = [UIApplication sharedApplication].delegate;
    [self.view removeFromSuperview];
    [app authorized];
@@ -105,22 +105,22 @@
    } else if (section == 1) {
       return 1;
    }
-   
+
    return 0;
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-   
+
    static NSString *CellIdentifier = @"SettingViewCell";
-   
+
    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
    if (cell == nil) {
       cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
    }
-   
+
    // Set up the cell...
-	
+
    if (indexPath.section == 0) {
       CGRect cellFrame = cell.frame;
 
@@ -147,7 +147,7 @@
    } else if (indexPath.section == 1) {
       cell.textLabel.text = @"Reset";
    }
-   
+
    return cell;
 }
 
@@ -178,14 +178,14 @@
 /*
  // Override to support editing the table view.
  - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- 
+
  if (editingStyle == UITableViewCellEditingStyleDelete) {
  // Delete the row from the data source
  [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
- }   
+ }
  else if (editingStyle == UITableViewCellEditingStyleInsert) {
  // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }   
+ }
  }
  */
 
